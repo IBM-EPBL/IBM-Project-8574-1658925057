@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Dashboard</title>
+<style>
+body{
+text-align: center;
+}
+</style>
+</head>
+<body background="re.jpg">
+<h1>Welcome</h1>
+<p>Choose Any One Option</p>
+<p>To View Dashboard</p><br>
+<button onclick="dash()">Dashboard</button><br>
+<p>To view Story</p><br>
+<button onclick="story()">Story</button><br>
+<p>To view Report</p><br>
+<button onclick="report()">Sales Report</button><br>
+<script>
+function dash(){
+location.replace("https://us1.ca.analytics.ibm.com/bi/?perspective=dashboard&pathRef=.my_folders%2FNew%2Bdashboard%2B1&action=view&mode=dashboard&subView=model0000018480663381_00000000")
+}
+function story(){
+location.replace("https://us1.ca.analytics.ibm.com/bi/?perspective=story&pathRef=.my_folders%2FNew%2Bstory&action=view&sceneId=model00000184864a93c3_00000001&sceneTime=0")
+}
+function report(){
+location.replace("https://us1.ca.analytics.ibm.com/bi/?pathRef=.my_folders%2FSales%2BReport&action=run&format=HTML&prompt=false")
+}
+</script>
+</body>
+</html>

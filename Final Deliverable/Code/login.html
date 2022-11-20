@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Retail</title>
+<style>
+body{
+text-align: center;
+}
+</style>
+<script>
+function r(){
+var k=document.cse.uname.value;
+var i=document.cse.pwd.value;
+var x=document.cse.email.value;
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");
+if(k.length==0)
+{
+document.getElementById("userdemo").innerHTML="Please enter the user name";
+}
+else{
+document.getElementById("userdemo").innerHTML="YA..ok";
+}
+if((isNaN(i))||(i.length<6))
+{
+document.getElementById("passdemo").innerHTML="Please enter the 6 numerical charcters as password";
+}
+else{
+document.getElementById("passdemo").innerHTML="Good";
+}
+ 
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  document.getElementById("maildemo").innerHTML="Please enter the correct format of mailid";
+  }
+else{
+document.getElementById("maildemo").innerHTML="correct format";
+}
+}
+</script>
+</head>
+<body background="form.jpg">
+<h1> Retail Store Stock Inventory Analytics</h1>
+<h3> Login</h3>
+<form name="cse" action="a1.html" onsubmit="return r()">
+<div>
+UserName:<input type="text" name="uname">
+<p id="userdemo"></p><br>
+Password:<input type="password" name="pwd" >
+<p id="passdemo"></p><br>
+Email-id:<input type="text" name="email" >
+<p id="maildemo"></p>
+<input type="submit" value="Submit" / >
+<input type="reset">
+</div>
+</form>
+</body>
+</html>
